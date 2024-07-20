@@ -1,0 +1,19 @@
+<input type="text" placeholder="Cerca prodotti..."
+          [(ngModel)]="searchTerm"
+          (change)="getProductsByName()"
+          class="search-product-bar"/>
+<!-- <button (click)="amILogged()">Am I Logged?</button> -->
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let product of filteredProducts; let i = index">
+        <img [src]="images_path + product.url" [alt]="product.name">
+        <h3>{{ product.name }}</h3>
+        <p>&euro; {{ product.price }}</p>
+        <div class="quantity-container">
+            <button (click)="decreaseQuantity(i)">-</button>
+            <input type="number" [(ngModel)]="productsInCart[i].quantity" min="1" max="{{product.quantity}}">
+            
+            <button (click)="increaseQuantity(i)">+</button>
+        </div>
+        <button class="btn" (click)="addToCart(product, i)">Aggiungi al carrello</button>
+    </div>
+</div>

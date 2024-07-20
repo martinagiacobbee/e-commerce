@@ -1,0 +1,26 @@
+
+<div class="navbar">
+    <div class="navbar-left">
+        <a (click)="verifyUser()">Home</a>
+        <a href="https://www.rodeodrivediner.it/" target="_blank">About</a>
+        <a href="https://www.instagram.com/rodeodrive_diner/" target="_blank">Contact</a>
+          
+    </div>
+  
+
+    <div class="navbar-right">
+        <a href="/login" >Login</a>
+        <a href="/home" (click)="logout_user()">Logout</a>
+        <a href="/cart">Cart</a>
+        <a href="/history">My Orders</a>
+    </div>
+</div>
+
+
+<div class="footer">
+  &copy; 2024 E-commerce. All rights reserved.
+</div>
+<router-outlet />
+
+
+<router-outlet />

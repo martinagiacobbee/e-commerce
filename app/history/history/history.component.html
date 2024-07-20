@@ -1,0 +1,25 @@
+<div class="my-orders-container">
+    <div class="my-orders-header">
+      <h1>ORDERS</h1>
+    </div>
+  
+    <div *ngIf="orders && orders.length > 0; else noOrders" class="my-orders-list">
+      <div *ngFor="let order of orders; let index = index" class="my-order-item">
+        <div class="my-order-title">ORDER {{ index + 1 }}</div>
+        <div class="my-order-info">Order ID: {{ order.cartId }}</div>
+        <div class="my-order-products">
+          <div *ngFor="let product of order.products">
+            <div class="my-product-title">{{ product.name }}</div>
+            <div class="my-product-info">Price: {{ product.price }}</div>
+            <div class="my-product-info">Quantity: {{ product.quantity }}</div>
+          </div>
+        </div>
+        <div class="my-order-info">Date: {{ order.purchaseTime }}</div>
+      </div>
+    </div>
+  
+    <ng-template #noOrders>
+      <p class="my-no-orders-message">No orders yet.</p>
+    </ng-template>
+  </div>
+  

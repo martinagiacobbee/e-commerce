@@ -1,0 +1,13 @@
+<div>
+    <div class="hello-admin-message">
+        <h1>Hello Admin!</h1>
+      </div>
+    <div class="console-container">
+      <div class="console-card" *ngFor="let feature of features">
+        <h2>{{ feature.title }}</h2>
+        <p>{{ feature.description }}</p>
+        <button (click)="executeFunction(feature.title)">Go to</button>
+      </div>
+    </div>
+  </div>
+  

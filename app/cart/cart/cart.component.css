@@ -1,0 +1,38 @@
+.container {
+    /* background-color: #ffeb3b; */
+    background-image: url("../../../assets/images/showcase_blur.jpg");
+    padding: 20px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .cart-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cart-list img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .details {
+    flex-grow: 1;
+  }
+  
+  button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  

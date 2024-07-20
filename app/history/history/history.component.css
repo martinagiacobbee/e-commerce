@@ -1,0 +1,71 @@
+.my-orders-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.my-orders-header {
+  background-color: #ffa500;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+
+.my-orders-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.my-order-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.my-order-item:hover {
+  background-color: #f0f0f0;
+}
+
+.my-order-title {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.my-order-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.my-order-products {
+  margin-top: 10px;
+}
+
+.my-product-title {
+  color: grey;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.my-product-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.my-no-orders-message {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}

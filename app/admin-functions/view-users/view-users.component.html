@@ -1,0 +1,54 @@
+<div class="toolbar">
+  <h1>Registered Users</h1>
+  <span class="spacer"></span>
+  <div>
+    <!-- <form [formGroup]="nameForm" (ngSubmit)="onSearch()">
+      <div class="form-field">
+        <label for="search">Search username...</label>
+        <input id="search" type="text" formControlName="name">
+      </div>
+      <button type="submit">Search</button>
+    </form> -->
+  </div>
+</div>
+
+<div class="user-list">
+  <ul *ngIf="users.length; else noData">
+    <li *ngFor="let user of users; index as i" (click)="viewUserCart(user.username)">
+      <div class="user-info">
+        <h3>USER {{ i + 1 }}</h3>
+        <p>Username: {{ user.username }}</p>
+        <p>First name: {{ user.firstName }}</p>
+        <p>Last name: {{ user.lastName }}</p>
+        <p>Email: {{ user.email }}</p>
+      </div>
+      <img src="../../../assets/images/user.png" alt="">
+    </li>
+  </ul>
+  <ng-template #noData>
+    <p>No users found</p>
+  </ng-template>
+</div>
+
+<div class="orders-list" *ngIf="orders.length > 0">
+  <div class="order" *ngFor="let order of orders; index as i">
+    <div class="order-details">
+      <div class="order-title">ORDER {{ i + 1 }}</div>
+      <div class="order-info">
+        <p>Order ID: {{ order.cartId }}</p>
+        <p>Date and time: {{ order.purchaseTime }}</p>
+      </div>
+    </div>
+    <div class="products-list">
+      <div *ngIf="order.products.length === 0" class="no-products-message">
+        No products in this order.
+      </div>
+      <div *ngIf="order.products.length > 0" class="products">
+        <div class="product" *ngFor="let product of order.products">
+          <p>Product: {{ product.name }}</p>
+          <p>Quantity: {{ product.quantity }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

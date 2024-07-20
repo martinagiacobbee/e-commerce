@@ -1,0 +1,78 @@
+.search-product-bar {
+    width: 40%; 
+    margin: 0px auto; 
+    padding: 15px; 
+    border: 2px solid #218838; 
+    border-radius: 5px; 
+    font-size: 18px; 
+    text-align: center; 
+    position: inherit;
+    background-color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.432);
+}
+
+
+.search-product-bar:hover {
+    background-color: #5e5d5d; 
+    border-color: #218838; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.grid-item {
+    border: 1px solid #ddd;
+    box-shadow:  10px 10px rgba(0, 0, 0, 0.546);
+    background-color: rgba(97, 97, 97, 0.489);
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.grid-item img {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #218838;
+}
+.quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.quantity-container button {
+    font-size: 16px;
+    padding: 5px 10px;
+
+}
+.quantity-container input {
+    width: 50px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    margin: 0 5px;
+}

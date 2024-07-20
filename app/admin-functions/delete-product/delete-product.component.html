@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Delete Product</h2>
+    <form [formGroup]="deleteProdForm" (ngSubmit)="delete()">
+      <div class="form-group">
+        <label for="id">Product ID:</label>
+        <input type="text" class="form-control" id="id" name="id" formControlName="id" placeholder="Enter Product ID" required>
+      </div>
+  
+      <!-- Success message -->
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
+  
+      <!-- Error message -->
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+  
+      <button type="submit" [disabled]="!deleteProdForm.valid" class="btn btn-danger">Delete Product</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Carrello</h1>
+    <ul class="cart-list">
+      <li *ngFor="let product of cart">
+        <img [src]="images_path + product.url" alt="{{ product.name }}" />
+        <div class="details">
+          <p>Name: {{ product.name }}</p>
+          <p>Quantity: {{ product.quantity }}</p>
+          <p>Price: {{ product.price }}&euro;</p>
+        </div>
+        <button (click)="removeFromCart(product)">Rimuovi</button>
+      </li>
+    </ul>
+    <div class="total">
+      <p>Totale: {{ total }}&euro;</p>
+    </div>
+    <button (click)="proceedToPayment()">Paga</button>
+  </div>
+  

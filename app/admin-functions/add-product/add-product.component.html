@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Add new product</h2>
+    <form [formGroup]="addProdForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Enter name" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Picture URL:</label>
+        <input type="text" class="form-control" id="image" name="image" formControlName="url" placeholder="Enter URL of the picture" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" name="description" formControlName="description" placeholder="Enter description" ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="text" class="form-control" id="price" name="price" formControlName="price" placeholder="Enter price" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="text" class="form-control" id="quantity" name="quantity" formControlName="quantity" placeholder="Enter quantity" required>
+      </div>
+  
+      <!-- Success message -->
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
+  
+      <!-- Error message -->
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+  
+      <button type="submit"  [disabled]="!addProdForm.valid"  class="btn btn-primary">Add Product</button>
+    </form>
+  </div>
+  

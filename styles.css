@@ -1,0 +1,17 @@
+
+body{
+    margin : 0;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    background-image : url("assets/images/black_and_white.jpg");
+    color: white;
+}
+
+.box{
+    box-shadow: #000000 0px 5px 15px;
+    padding: 15px;
+}
+
+.hideScrollBar::-webkit-scrollbar{
+    display: none;
+}
+
