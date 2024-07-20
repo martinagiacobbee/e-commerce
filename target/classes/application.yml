@@ -1,0 +1,39 @@
+server:
+    port: 8180
+
+spring:
+    application:
+        name: Rodeodrivediner_webapp
+    datasource:
+        url: jdbc:postgresql://localhost:5432/mydb
+        username: postgres
+        password: 1234
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                format_sql: true
+
+    #server:
+     #   ssl:
+      #      key-store-password: password_certificate
+       #     key-store-type: PKCS12
+        #    key-store: /home/debian/ssl-cert/certificate.p12
+
+
+    security:
+        oauth2:
+            resource server:
+                jwt:
+                    jwk-set-uri: http://localhost:8080/realms/myRealm/protocol/openid-connect/certs
+                    issuer-uri: http://localhost:8080/realms/myRealm
+
+jwt:
+    auth:
+        converter:
+            resource-id: springboot-keycloak
+            principle-attribute: preferred_username
+
